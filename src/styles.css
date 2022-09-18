@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.form-group {
+    @apply relative py-5 px-0 pb-10 w-[300px];
+}
+
+.form-group input {
+    @apply bg-transparent border-0 border-b-[2px] border-b-white block w-full px-0 text-[18px];
+}
+
+.form-group label {
+    @apply absolute top-[15px] left-0;
+}
+
+.form-group label span {
+    @apply inline-block text-[18px] min-w-[5px] transition-all duration-300 ease-wave;
+}
+
+.form-group input:focus+label span,
+.form-group input:valid+label span {
+    @apply text-[lightblue] transform translate-y-[-30px];
+}
